@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <menu>
+    <subtitle>20 години качествени мебели</subtitle>
+    <begin>Начало</begin>
+    <forus>За нас</forus>
+    <materials>Мебелни магазини</materials>
+    <textmodels>Модели</textmodels>
+      <armchairs>Фотьойли</armchairs>
+      <sofas>Канапета </sofas>
+      <cornersofas>Мека мебел</cornersofas>
+    <references>Референции</references>
+    <contacts>Контакти</contacts>
+  </menu>
+</root>

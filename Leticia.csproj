@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3EEA1236-7F17-41B8-B52A-1382A86AE1C5}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Leticia</RootNamespace>
+    <AssemblyName>Leticia</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.30506.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.30506.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.30506.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.30506\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Classes\AppStatic.cs" />
+    <Compile Include="Classes\Email\RootObject.cs" />
+    <Compile Include="Classes\Enums.cs" />
+    <Compile Include="Classes\Language.cs" />
+    <Compile Include="Classes\Output\RootObject.cs" />
+    <Compile Include="Controllers\AboutUsController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArmchairController.cs" />
+    <Compile Include="Controllers\CornerSofaController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PortfolioController.cs" />
+    <Compile Include="Controllers\ReferencesController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\SofasController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ProjectModels\AboutModel.cs" />
+    <Compile Include="Models\ProjectModels\HomeModel.cs" />
+    <Compile Include="Models\ProjectModels\ViewModelBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\jplayer.css" />
+    <Content Include="Content\logo.css" />
+    <Content Include="Content\menu.css" />
+    <Content Include="Content\prettyPhoto.css" />
+    <Content Include="Content\reset.css" />
+    <Content Include="Content\slider.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="History\history.txt" />
+    <Content Include="Images\ProjectImages\AboutUs\services09.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\17.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\18.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\1_big.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\10.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\11.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\12.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\13.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\14.jpeg" />
+    <Content Include="Images\ProjectImages\Armchair\big\15.jpeg" />
+    <Content Include="Images\ProjectImages\Armchair\big\16.jpeg" />
+    <Content Include="Images\ProjectImages\Armchair\big\2.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\3.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\4.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\5.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\6.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\7.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\8.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\9.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\charo.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\big\eclipse.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\ArmchairEclipse.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\18.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\17.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\10_normal.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\1_normal.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\11.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\12.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\13.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\14.jpeg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\15.jpeg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\16.jpeg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\2.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\3.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\4.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\5.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\6.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\7.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\8.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\9.jpg" />
+    <Content Include="Images\ProjectImages\Armchair\normal\SesselCharo.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\big\1.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\big\2.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\big\3.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\big\4.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\big\5.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\big\6.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\big\7.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\big\8.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\big\9.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\big\EcksofaCologne.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\normal\1_normal.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\normal\2_normal.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\normal\3_normal.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\normal\4_normal.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\normal\5_normal.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\normal\6_normal.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\normal\7_normal.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\normal\8_normal.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\normal\9_normal.jpg" />
+    <Content Include="Images\ProjectImages\CornerSofa\normal\EcksofaCologne.jpg" />
+    <Content Include="Images\ProjectImages\dark\default_thumb.png" />
+    <Content Include="Images\ProjectImages\dark\loader.gif" />
+    <Content Include="Images\ProjectImages\dark\sprite.png" />
+    <Content Include="Images\ProjectImages\dark\sprite_next.png" />
+    <Content Include="Images\ProjectImages\dark\sprite_prev.png" />
+    <Content Include="Images\ProjectImages\dark\sprite_x.png" />
+    <Content Include="Images\ProjectImages\dark\sprite_y.png" />
+    <Content Include="Images\ProjectImages\default\default_thumb.png" />
+    <Content Include="Images\ProjectImages\default\loader.gif" />
+    <Content Include="Images\ProjectImages\default\sprite.png" />
+    <Content Include="Images\ProjectImages\default\sprite_next.png" />
+    <Content Include="Images\ProjectImages\default\sprite_prev.png" />
+    <Content Include="Images\ProjectImages\default\sprite_x.png" />
+    <Content Include="Images\ProjectImages\default\sprite_y.png" />
+    <Content Include="Images\ProjectImages\googleMapLoader.gif" />
+    <Content Include="Images\ProjectImages\icons.png" />
+    <Content Include="Images\ProjectImages\ImagesSliderOriginal\slide01.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSliderOriginal\slide02.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSliderOriginal\slide03.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSliderOriginal\slide04.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSliderOriginal\slide05.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSliderOriginal\slide06.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSlider\150284_154395017938481_7996176_n.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSlider\31577_489181231126523_989802329_n.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSlider\525372_552821208095858_380866788_n.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSlider\76705_154395057938477_3736785_n.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSlider\995_485399234838056_1474692637_n.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSlider\ArmchairEclipse.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSlider\armchairZuerich3.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSlider\armchairTeo.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSlider\Copy102_1.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSlider\IMG_20140913_092217.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSlider\IMG_20140913_103203.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSlider\RedSofaMonti.jpg" />
+    <Content Include="Images\ProjectImages\ImagesSlider\sofaCologne_S.jpg" />
+    <Content Include="Images\ProjectImages\li_st1.png" />
+    <Content Include="Images\ProjectImages\pagination.png" />
+    <Content Include="Images\ProjectImages\photo1.png" />
+    <Content Include="Images\ProjectImages\References\big\06-09-2015-2.png" />
+    <Content Include="Images\ProjectImages\References\big\06-09-2015-3.jpg" />
+    <Content Include="Images\ProjectImages\References\big\06-09-2015-4.jpg" />
+    <Content Include="Images\ProjectImages\References\big\06.09.2015-5.jpg" />
+    <Content Include="Images\ProjectImages\References\big\150284_154395017938481_7996176_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\1549572_597888390281392_1405248411_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\1622698_597888393614725_1519360595_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\1660901_597888396948058_1932913969_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\1780812_597888533614711_467356859_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\1800434_597888580281373_638314329_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\190099_181509275227055_3076840_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\2010-ADAMEVA2.png" />
+    <Content Include="Images\ProjectImages\References\big\260469_206184416092874_7895467_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\264434_206184329426216_6997881_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\265179_206184439426205_700294_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\294474_263695607008421_396084139_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\312476_437489926329170_231633890_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\31577_489181231126523_989802329_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\377202_280372125340769_1295665003_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\380631_346723878736346_2094597375_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\417871_566510123393633_1785820679_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\485796_285761744832560_645123305_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\525338_566509843393661_1487582459_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\525372_552821208095858_380866788_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\531848_509916012418275_1022186771_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\536778_385745461470101_1004867211_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\547422_552821604762485_971771037_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\555320_437489862995843_1939397825_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\577188_385745831470064_399202177_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\6550_483870881662064_742651133_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\76705_154395057938477_3736785_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\76954_154394994605150_3914509_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\923117_566510010060311_2084341985_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\923445_566510106726968_494321186_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\934110_566519150059397_660185068_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\972367_566509820060330_1433492670_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\995_485399234838056_1474692637_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\998776_515691388507404_1173754952_n.jpg" />
+    <Content Include="Images\ProjectImages\References\big\armchairAnd2SeaterSofaTeo.jpg" />
+    <Content Include="Images\ProjectImages\References\big\Copy102_1.jpg" />
+    <Content Include="Images\ProjectImages\References\big\IMG_20140913_103203.jpg" />
+    <Content Include="Images\ProjectImages\References\big\RedSofaMonti.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\06-09-2015-2.png" />
+    <Content Include="Images\ProjectImages\References\normal\06-09-2015-3.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\06-09-2015-4.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\06.09.2015-5.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\150284_154395017938481_7996176_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\1549572_597888390281392_1405248411_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\1622698_597888393614725_1519360595_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\1660901_597888396948058_1932913969_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\1780812_597888533614711_467356859_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\1800434_597888580281373_638314329_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\190099_181509275227055_3076840_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\2010-ADAMEVA2.png" />
+    <Content Include="Images\ProjectImages\References\normal\260469_206184416092874_7895467_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\264434_206184329426216_6997881_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\265179_206184439426205_700294_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\294474_263695607008421_396084139_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\312476_437489926329170_231633890_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\31577_489181231126523_989802329_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\377202_280372125340769_1295665003_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\380631_346723878736346_2094597375_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\417871_566510123393633_1785820679_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\485796_285761744832560_645123305_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\525338_566509843393661_1487582459_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\525372_552821208095858_380866788_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\531848_509916012418275_1022186771_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\536778_385745461470101_1004867211_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\547422_552821604762485_971771037_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\555320_437489862995843_1939397825_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\577188_385745831470064_399202177_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\6550_483870881662064_742651133_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\76705_154395057938477_3736785_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\76954_154394994605150_3914509_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\923117_566510010060311_2084341985_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\923445_566510106726968_494321186_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\934110_566519150059397_660185068_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\972367_566509820060330_1433492670_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\995_485399234838056_1474692637_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\998776_515691388507404_1173754952_n.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\armchairAnd2SeaterSofaTeo.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\Copy102_1.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\IMG_20140913_103203.jpg" />
+    <Content Include="Images\ProjectImages\References\normal\RedSofaMonti.jpg" />
+    <Content Include="Images\ProjectImages\ServicesImages\gallery04.jpg" />
+    <Content Include="Images\ProjectImages\ServicesImages\gallery05.jpg" />
+    <Content Include="Images\ProjectImages\ServicesImages\gallery06.jpg" />
+    <Content Include="Images\ProjectImages\ServicesImages\gallery17.jpg" />
+    <Content Include="Images\ProjectImages\social_ic4.png" />
+    <Content Include="Images\ProjectImages\Sofas\big\14_big.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\SofaCologne.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\sofaCologne_S.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\sofaCologne_S2.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\Sofa_Comforto-S.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\Sofa_Comforto.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\1.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\10_big.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\11_big.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\12_big.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\13_big.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\1_big.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\10.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\11.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\12.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\13.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\14.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\2.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\2_big.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\3_big.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\4_big.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\5_big.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\6_big.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\7_big.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\8_big.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\big\9_big.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\3.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\4.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\5.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\6.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\7.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\8.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\9.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\SofaCologne.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\sofaCologne_S.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\sofaCologne_S2.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\Sofa_Comforto-S.jpg" />
+    <Content Include="Images\ProjectImages\Sofas\normal\Sofa_Comforto.jpg" />
+    <Content Include="Images\ProjectImages\submit.png" />
+    <Content Include="Images\ProjectImages\Leticia-IMM2015.jpg" />
+    <Content Include="XML\aboutus\BG.xml" />
+    <Content Include="XML\aboutus\DE.xml" />
+    <Content Include="XML\aboutus\EN.xml" />
+    <Content Include="XML\aboutus\keyWords.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\armchairs\BG.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\armchairs\DE.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\armchairs\EN.xml" />
+    <Content Include="XML\contacts\BG.xml" />
+    <Content Include="XML\contacts\DE.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\contacts\EN.xml" />
+    <Content Include="XML\cornersofa\BG.xml" />
+    <Content Include="XML\cornersofa\DE.xml" />
+    <Content Include="XML\cornersofa\EN.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\foother\BG.xml" />
+    <Content Include="XML\foother\DE.xml" />
+    <Content Include="XML\foother\EN.xml" />
+    <Content Include="XML\forus\BG.xml" />
+    <Content Include="XML\forus\DE.xml" />
+    <Content Include="XML\forus\EN.xml" />
+    <Content Include="XML\index\BG.xml" />
+    <Content Include="XML\index\DE.xml" />
+    <Content Include="XML\index\EN.xml" />
+    <Content Include="XML\menu\BG.xml" />
+    <Content Include="XML\menu\DE.xml" />
+    <Content Include="XML\menu\EN.xml" />
+    <Content Include="XML\portfolio\BG.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\portfolio\DE.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\portfolio\EN.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\privacypolicy\privacipolicy.xml" />
+    <Content Include="XML\references\BG.xml" />
+    <Content Include="XML\references\DE.xml" />
+    <Content Include="XML\references\EN.xml" />
+    <Content Include="XML\services\BG.xml" />
+    <Content Include="XML\services\DE.xml" />
+    <Content Include="XML\services\EN.xml" />
+    <Content Include="XML\sofas\BG.xml" />
+    <Content Include="XML\sofas\DE.xml" />
+    <Content Include="XML\sofas\EN.xml" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Images\ProjectImages\loader.gif" />
+    <Content Include="Images\ProjectImages\logo.png" />
+    <Content Include="Images\ProjectImages\px1.jpg" />
+    <Content Include="Images\ProjectImages\px2.png" />
+    <Content Include="Images\ProjectImages\splash_bg.png" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\ProjectScripts\ajax.js.switch.js" />
+    <Content Include="Scripts\ProjectScripts\cform.js" />
+    <Content Include="Scripts\ProjectScripts\history.min.js" />
+    <Content Include="Scripts\ProjectScripts\html5.js" />
+    <Content Include="Scripts\ProjectScripts\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\ProjectScripts\jquery.ba-resize.min.js" />
+    <Content Include="Scripts\ProjectScripts\jquery.color.js" />
+    <Content Include="Scripts\ProjectScripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\ProjectScripts\jquery.jplayer.min.js" />
+    <Content Include="Scripts\ProjectScripts\jquery.prettyPhoto.js" />
+    <Content Include="Scripts\ProjectScripts\jquery.transform.js" />
+    <Content Include="Scripts\ProjectScripts\main.js" />
+    <Content Include="Scripts\ProjectScripts\request_url.js" />
+    <Content Include="Scripts\ProjectScripts\script.js" />
+    <Content Include="Scripts\ProjectScripts\tms-0.4.1.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Home\PrivaciPolicy.cshtml" />
+    <Content Include="Views\Sofas\Sofas.cshtml" />
+    <Content Include="Views\References\References.cshtml" />
+    <Content Include="Views\Armchair\Armchair.cshtml" />
+    <Content Include="Views\CornerSofa\CornerSofa.cshtml" />
+    <Content Include="Views\AboutUs\AboutUs.cshtml" />
+    <Content Include="Views\Portfolio\Portfolio.cshtml" />
+    <Content Include="Views\Services\Services.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49595</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49595/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

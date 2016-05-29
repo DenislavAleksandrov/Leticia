@@ -1,0 +1,199 @@
+﻿@model Leticia.Models.ProjectModels.HomeModel
+@{
+    ViewBag.Title = "Leticia Mebel";
+}
+
+<div id="wrapper">
+    <section>
+        <div class="dynamicContent">
+            <div style="padding-left:40px;padding-top:20px;">
+                @if(Model.Country != Leticia.Classes.CountryEnum.Bulgaria)
+                {
+                <div style="margin-left:10px;">
+                    <p style=" line-height: 2; text-indent: 10px;">
+                        @Model.viewInfo["firstpart"]
+                    </p>
+
+                    <div style="width:100%;height:15px;"></div>
+
+                    <p style=" line-height: 2; text-indent: 10px;">
+                        @Model.viewInfo["second"]
+                    </p>
+
+                    <div style="width:100%;height:15px;"></div>
+
+                    <p style=" line-height: 2;">
+                        @Model.viewInfo["fourtpard"]
+                        <br/>
+                        @Model.viewInfo["fivepart"]
+                    </p>
+
+                    <div style="width:100%;height:15px;"></div>
+
+                    <p style=" line-height: 2;">
+                        @Model.viewInfo["tel"]
+                    </p>
+
+                    <p style=" line-height: 2;">
+                        @Model.viewInfo["email"]
+                    </p>
+
+                    <div style="margin-top:40px;">
+                        <img src="~/Images/ProjectImages/ServicesImages/gallery04.jpg" style="margin-right: 10px; margin-left: 10px;"/>
+
+                        <img src="~/Images/ProjectImages/ServicesImages/gallery17.jpg" style="margin-right:10px;" />
+                        
+                        <img src="~/Images/ProjectImages/ServicesImages/gallery06.jpg" style=" margin-right:10px;">
+
+                        <img src="~/Images/ProjectImages/ServicesImages/gallery05.jpg" style=" margin-right:10px;">
+                    </div>
+
+                </div>
+                }
+                else
+                {
+                    <div>
+
+                        <div>
+                            Фирмен Магазин "Летиция Мебел ООД "<br />
+                            град Монтана<br />
+                            ул. "Княз Александър Батенберг" 48<br />
+                            телефон: 096 300 178<br />
+                        </div>
+
+                        <div style="width:100%;height:10px;"></div>
+                        <div style="width:50%;float:left;">
+                            <div>
+                                1. "Микина" ООД<br />
+                                гр. София<br />
+                                ул. ”Пиротска” № 73<br />
+                                тел.: 02/822 35 05<br />
+                            </div>
+
+                            <div style="width:100%;height:10px;"></div>
+
+                            <div>
+                                2.ТК”Мебел”АД<br />
+                                гр. София<br />
+                                бул.”П.Владигеров” № 1<br />
+                                тел.:02/ 825 71 24<br />
+                                www.tkmebel.com<br />
+                            </div>
+
+                            <div style="width:100%;height:10px;"></div>
+
+                            <div>
+                                3.ЕТ”Вики Лукс”<br />
+                                гр. София<br />
+                                "кв.Илиянци"<br />
+                                с/у складова база Илиянци<br />
+                            </div>
+
+                            <div style="width:100%;height:10px;"></div>
+
+                            <div>
+                                4. „Милчев” ЕООД<br />
+                                РУМ „Кремиковци“ - град София<br />
+                                Квартал „Ботунец“<br />
+                                тел.: 02/ 994 20 99<br />
+                                www.mebelrum.bg<br />
+                                тел.: 032 624536<br />
+                            </div>
+
+                            <div style="width:100%;height:10px;"></div>
+
+                            <div>
+                                5.Мебелен магазин<br />
+                                гр.Радомир<br />
+                                ул.”Батенберг”  № 13<br />
+                                тел.:0777/ 8 24 40<br />
+                            </div>
+
+                            <div style="width:100%;height:10px;"></div>
+
+                            <div>
+                                6. ЕТ”Александър Колев”<br />
+                                гр.Своге<br />
+                                ул.”Република” № 13<br />
+                                тел.:0726/ 30 91<br />
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                8.”П.Раденков”<br />
+                                гр.Драгоман<br />
+                                ул.”Ал.Стамболийски” № 2<br />
+                                тел.:07172/ 20 50<br />
+                            </div>
+
+                            <div style="width:100%;height:10px;"></div>
+
+                            <div>
+                                9.”П.Раденков”<br />
+                                гр.Драгоман<br />
+                                ул.”Ал.Стамболийски” № 2<br />
+                                тел.:07172/ 20 50<br />
+                            </div>
+
+                            <div style="width:100%;height:10px;"></div>
+
+                            <div>
+                                10.ПК”Костинброд”<br />
+                                гр.Костинброд<br />
+                                ул.”Охрид” № 11<br />
+                                тел.:0721/6 60 22<br />
+                            </div>
+
+                            <div style="width:100%;height:10px;"></div>
+
+                            <div>
+                                11.”Нова Деница М” АД<br />
+                                гр.Монтана<br />
+                                Мебелна къща<br />
+                                тел.: 096/ 30 01 63<br />
+                            </div>
+
+                            <div style="width:100%;height:10px;"></div>
+
+                            <div>
+                                12.ЕТ”Байко – ИИ”<br />
+                                гр.Видин<br />
+                                ул”Общинска” № 20<br />
+                                тел.:094/ 60 77 06<br />
+                            </div>
+
+                            <div style="width:100%;height:10px;"></div>
+
+                            <div>
+                                13.”АЙ ПИ ЕМ” ЕООД<br />
+                                гр.Враца<br />
+                                бул. Никола Войводов № 19<br />
+                                тел.: 092/ 66 50 10<br />
+                            </div>
+
+                            <div style="width:100%;height:10px;"></div>
+
+                            <div>
+                                14.”Мебелен свят”ЕООД<br />
+                                Гр.Враца<br />
+                                бул.”Мито Орозов” № 28, тел.:092/66 51 88<br />
+                            </div>
+
+                            <div style="width:100%;height:10px;"></div>
+
+                            <div>
+                                7. Мебелен салон Дантес<br />
+                                гр.Пловдив<br />
+                                по пътя Пловдив - Асеновград, в дясно, 500м. след КПП<br />
+                                тел.: 032 62 01 01<br />
+                                www.dantes.bg<br />
+                            </div>
+                         </div>
+                   </div>
+                    <div class="clear"></div>
+                }          
+             </div>
+        </div>
+    </section>
+</div>

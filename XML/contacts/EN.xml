@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<contacts>
+  <contactaddress>Contact Address</contactaddress>
+  <contactform>Contact Form</contactform>
+  <title>Leticia Mebel LTD.</title>
+  <person>Boris Georgiev</person>
+  <street>Kaiserstr. 39, 53113 Bonn</street>
+  <tel>Phone: +49 (0)1638132284</tel>
+  <email>E-mail: boris.georgiev(at)leticia-mebel.com</email>
+  <firstpart>Thank you for visiting our website, we sincerely appreciate it.  If you would like to</firstpart>
+  <secondpart>contact Leticia Furniture, please use any of the options below according to where</secondpart>
+  <thirdpart>you’re contacting us from.</thirdpart>
+  <formname>Your Name:</formname>
+  <formemail>Your E-Mail:</formemail>
+  <formtext>Your Text:</formtext>
+  <formtelefon>Telefon:</formtelefon>
+  <buttontext>Submit</buttontext>
+</contacts>
+
+
+

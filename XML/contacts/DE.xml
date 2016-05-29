@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<contacts>
+  <contactaddress>Kontakt</contactaddress>
+  <contactform>Kontakt-Formular</contactform>
+  <title>Büro in Deutschland:</title>
+  <person>Herr Boris Georgiev</person>
+  <street>Kaiserstr. 39, 53113 Bonn</street>
+  <tel>Tel.: +49 (0)1638132284</tel>
+  <email>Email: boris.georgiev(at)leticia-mebel.com</email>
+  <firstpart>Vielen Dank für Ihr Interesse. Gerne senden wir Ihnen ein unverbindliches</firstpart>
+  <secondpart>Angebot für das ausgewählte Produkt. Bitte füllen Sie das Formular aus </secondpart>
+  <thirdpart>damit wir Ihre Anfrage schnellstmöglich bearbeiten können.</thirdpart>
+  <formname>Ihr Name:</formname>
+  <formemail>Ihre E-Mail:</formemail>  
+  <formtext>Ihr Text:</formtext>
+  <formtelefon>Telefon:</formtelefon>
+  <buttontext>Senden</buttontext>
+</contacts>

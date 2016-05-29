@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<contacts>
+  <contactaddress>Адрес за контакти</contactaddress>
+  <contactform>Форма за контакти</contactform>
+  <title>Летиция Мебел ООД</title>
+  <person>Лице за контакт: Борис Георгиев</person>
+  <street>Адрес: ул. "Княз Ал. Батенберг 48",3400 Монтана, България</street>
+  <tel>Телефон: 096/ 300 178</tel>
+  <email>Ел.поща: boris.georgiev(at)leticia-mebel.com</email>
+  <firstpart>Благодарим Ви за посещението на сайта, ние оценяваме това. Ако желаете</firstpart>
+  <secondpart>да се свържете с "Летиция мебел", моля използвайте изброените по-долу</secondpart>
+  <thirdpart>възможности.</thirdpart>
+  <formname>Вашето Име:</formname>
+  <formemail>Вашият E-Mail:</formemail>
+  <formtext>Текст:</formtext>
+  <formtelefon>Телефон:</formtelefon>
+  <buttontext>Изпрати</buttontext>
+</contacts>

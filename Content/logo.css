@@ -1,0 +1,36 @@
+﻿
+/* ============================= Logo ====================== */
+.logo 
+{ display:inline-block;
+  text-decoration:none;
+}
+.logo .img
+{
+    padding-top: 50px;
+}
+.logo .txt1
+{
+    font-size: 35px; 
+    line-height: 40px; 
+    font-family: 'Raleway'; 
+    font-weight: 700; 
+    color: #737373; 
+    text-decoration: none; 
+    padding-top: 20px;
+}
+.logo .txt1 span
+{
+    color: #fff;
+}
+.logo .txt2
+{
+    display: block; 
+    font-size: 14px; 
+    line-height: 20px;
+    font-family: 'Raleway'; 
+    font-weight: 400; 
+    color: #737373; 
+    text-decoration: none; 
+    letter-spacing: 2px; 
+    text-transform: uppercase;
+}

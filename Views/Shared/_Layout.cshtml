@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-46791999-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+
+        <meta charset="utf-8" />
+
+        <meta name="keywords" content="@Model.metaTags">
+
+        <meta name="description" content="Leticia Mebel GmBH Ihr Hoteleinrichter für Rezeption, Bar und Hotels. Wir planen, gestalten und fertigen Hoteleinrichtungen, Objekteinrichtungen und Sitzmöbel für zahlreiche Kunden aus Deutschland.">
+
+        <title>@ViewBag.Title</title>
+
+        @Styles.Render("~/Content/css")
+
+        @Scripts.Render("~/bundles/modernizr")
+
+        @Scripts.Render("~/bundles/jquery")
+
+        <script type="text/javascript" src="/Scripts/ProjectScripts/main.js" ></script>
+
+        <section class="content-wrapper main-content clear-fix"></section>
+
+        <!--[if lt IE 8]>
+
+        <div style=' clear: both; text-align:center; position: relative;z-index:100;'>
+            <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+                <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+                alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+            </a>
+        </div>
+    <![endif]-->
+
+
+    </head>
+<body>
+    <div id="spinner"></div>
+    <div id="pageLoader">
+        <div></div>
+    </div>
+
+    @*<div style="left:50%; margin-left:365px;">
+        <img src="~/Images/ProjectImages/Leticia-IMM2015.jpg" />
+    </div>*@
+
+    <div id="wrapper">
+            <div class="px2"></div>
+
+            <div class="top1">
+                <header>
+                    <a href="~/Home/Index" class="logo">
+                        <div class="txt1" style="margin-bottom:5px;">Leticia <span>Mebel</span></div>
+                        <div class="txt2">@Model.menu["subtitle"].ToString()</div>                          
+                    </a>
+                </header>
+                <nav class="menu">
+                    <ul id="menu">
+                        <li>
+                            <a href="~/Home/Index">
+                                <span class="over1"></span>
+                                <span class="txt1">@Model.menu["begin"].ToString()</span>
+                                <span class="txt2">@Model.menu["begin"].ToString()</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="~/AboutUs/AboutUs">
+                                <span class="over1"></span>
+                                <span class="txt1">@Model.menu["forus"].ToString()</span>
+                                <span class="txt2">@Model.menu["forus"].ToString()</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="~/Services/Services">
+                                <span class="over1"></span>
+                                <span class="txt1">@Model.menu["materials"].ToString()</span>
+                                <span class="txt2">@Model.menu["materials"].ToString()</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="~/Portfolio/Portfolio">
+                                <span class="over1"></span>
+                                <span class="txt1">@Model.menu["textmodels"].ToString()</span>
+                                <span class="txt2">@Model.menu["textmodels"].ToString()</span>
+                            </a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="~/Armchair/Armchair"><span class="s_txt1">@Model.menu["armchairs"].ToString()</span></a></li>
+                                    <li><a href="~/Sofas/Sofas"><span class="s_txt1">@Model.menu["sofas"].ToString()</span></a></li>
+                                    <li><a href="~/CornerSofa/CornerSofa"><span class="s_txt1">@Model.menu["cornersofas"].ToString()</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="~/References/References">
+                                <span class="over1"></span>
+                                <span class="txt1">@Model.menu["references"].ToString()</span>
+                                <span class="txt2">@Model.menu["references"].ToString()</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="~/Home/Contact">
+                                <span class="over1"></span>
+                                <span class="txt1">@Model.menu["contacts"].ToString()</span>
+                                <span class="txt2">@Model.menu["contacts"].ToString()</span>
+                            </a>
+                        </li>
+                        <li class="last"></li>
+                    </ul>
+                </nav>
+            </div>
+
+            @RenderBody()
+        
+        <footer style="margin-bottom:5px;">
+            <div class="copyright">@Model.foother["copywrite"].ToString()<br>@Model.foother["rights"].ToString()</div>
+
+            <div class="call_us">@Model.foother["questions"].ToString()<br>@Model.foother["telefonText"].ToString()  @Model.foother["telefonValue"].ToString()</div>
+
+
+            @if (Model.Country == Leticia.Classes.CountryEnum.Germany || Model.Country == Leticia.Classes.CountryEnum.Zwizerland || Model.Country == Leticia.Classes.CountryEnum.Austria)
+            {
+                <a href="~/Home/PrivaciPolicy" class="privacy">@Model.foother["pravacipolicy"].ToString()</a>
+            }
+
+            <ul class="icons">
+                <li class="nav4"><a href="http://www.facebook.com/pages/Leticia-Mebel/124564380947131"><img src="~/Images/ProjectImages/social_ic4.png"></a></li>
+            </ul>
+
+            <div class="icons_txt">Follow us:</div>
+            <div class="clear"></div>
+        </footer>
+    </div>
+
+    <script>
+
+        $("a[rel^='prettyPhoto']").prettyPhoto({ animation_speed: 'normal', theme: 'dark', social_tools: false, allow_resize: true, default_width: 500, default_height: 344 });
+
+        // slider
+        $('.slider')._TMS({
+            show: 0,
+            pauseOnHover: false,
+            prevBu: '.sprev',
+            nextBu: '.snext',
+            duration: 800,
+            preset: 'diagonalFade',
+            easing: "easeOutExpo",
+            pagination: true,//'.pagination',true,'<ul></ul>'
+            pagNums: false,
+            slideshow: 3000,
+            numStatus: false,
+            banners: false,    // false 'fromLeft', 'fromRight', 'fromTop', 'fromBottom', 'fade'
+            waitBannerAnimation: true,
+            bannerEasing: 'easeInOutExpo',
+            bannerDuration: 1000
+        });
+
+        $("#menu_splash li a").find(".over1").css({ opacity: 0 });
+        $("#menu_splash li a").find(".txt1").css({ bottom: '100%', opacity: 0 });
+        $("#menu_splash li a").find(".txt2").css({ bottom: '100%', opacity: 0 });
+        $("#menu_splash li a").hover(function () {
+            $(this).find(".over1").stop(true).delay(0).animate({ opacity: 0.8 }, 400, 'easeOutBounce');
+            $(this).find(".txt1").css({ bottom: '100%', opacity: 0 }).stop(true).delay(150).animate({ bottom: '0%', opacity: 1 }, 600, 'easeOutExpo');
+            $(this).find(".txt2").css({ bottom: '100%', opacity: 0 }).stop(true).delay(0).animate({ bottom: '0%', opacity: 1 }, 600, 'easeOutExpo');
+        }, function () {
+            $(this).find(".over1").stop(true).delay(100).animate({ opacity: 0 }, 600, 'easeInOutExpo');
+            $(this).find(".txt1").stop(true).delay(150).animate({ bottom: '-100%', opacity: 0 }, 600, 'easeInOutExpo');
+            $(this).find(".txt2").stop(true).delay(0).animate({ bottom: '-100%', opacity: 0 }, 600, 'easeInOutExpo');
+        });
+
+    </script>
+
+</body>
+</html>

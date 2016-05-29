@@ -1,0 +1,85 @@
+﻿@model Leticia.Models.ProjectModels.HomeModel
+@{
+    ViewBag.Title = "Leticia Mebel";    
+}
+
+<section>
+        <div class="dynamicContent">
+            <!--content -->
+            <div class=" splash">
+
+                <div class="slider">
+                    <ul class="items">
+                        <li><img src="~/Images/ProjectImages/ImagesSlider/ArmchairEclipse.jpg" /></li>
+                        <li><img src="~/Images/ProjectImages/ImagesSlider/sofaCologne_S.jpg" /></li>
+                        <li><img src="~/Images/ProjectImages/ImagesSlider/armchairTeo.jpg" /></li>
+                        <li><img src="~/Images/ProjectImages/ImagesSlider/RedSofaMonti.jpg" /></li>
+                        <li><img src="~/Images/ProjectImages/ImagesSlider/armchairZuerich3.jpg" /></li>
+                        <li><img src="~/Images/ProjectImages/ImagesSlider/IMG_20140913_092217.jpg" /></li>
+                        <li><img src="~/Images/ProjectImages/ImagesSlider/IMG_20140913_103203.jpg" /></li>                        
+                        <li><img src="../Images/ProjectImages/ImagesSlider/Copy102_1.jpg"></li>                                            
+                    </ul>
+                </div>
+
+            </div>
+            <div class="menu_splash">
+                <ul id="menu_splash">
+                    <li class="nav1">
+                        <a href="~/Home/Index">
+                            <span class="over1"></span>
+                            <span class="txt1">@Model.viewInfo["begin"].ToString()</span>                            
+                        </a>
+                    </li>
+                    <li class="nav2">
+                        <a href="~/AboutUs/AboutUs">
+                            <span class="over1"></span>
+                            <span class="txt1">@Model.viewInfo["forus"].ToString()</span>
+                        </a>
+                    </li>
+                    <li class="nav3">
+                        <a href="~/Services/Services">
+                            <span class="over1"></span>
+                            <span class="txt1">@Model.viewInfo["materials"].ToString()</span>
+                        </a>
+                    </li>
+                    <li class="nav4">
+                        <a href="~/Portfolio/Portfolio">
+                            <span class="over1"></span>
+                            <span class="txt1">@Model.viewInfo["textmodels"].ToString()</span>
+                        </a>
+                    </li>
+                    <li class="nav5">
+                        <a href="~/CornerSofa/CornerSofa">
+                            <span class="over1"></span>
+                            <span class="txt1">@Model.viewInfo["cornersofas"].ToString()</span>
+                        </a>
+                    </li>
+                    <li class="nav6">
+                        <a href="~/References/References">
+                            <span class="over1"></span>
+                            <span class="txt1">@Model.viewInfo["references"].ToString()</span>
+                        </a>
+                    </li>
+                    <li class="nav7">
+                        <a href="~/Armchair/Armchair">
+                            <span class="over1"></span>
+                            <span class="txt1">@Model.viewInfo["armchairs"].ToString()</span>
+                        </a>
+                    </li>
+                    <li class="nav8">
+                        <a href="~/Sofas/Sofas">
+                            <span class="over1"></span>
+                            <span class="txt1">@Model.viewInfo["sofas"].ToString()</span>
+                        </a>
+                    </li>
+                    <li class="nav9">
+                        <a href="~/Home/Contact">
+                            <span class="over1"></span>
+                            <span class="txt1">@Model.viewInfo["contacts"].ToString()</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--content end -->
+        </div>
+</section>

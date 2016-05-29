@@ -1,0 +1,90 @@
+﻿@model Leticia.Models.ProjectModels.HomeModel
+@{
+    ViewBag.Title = "Leticia Mebel";  
+}
+<div id="wrapper">
+    <section>
+        <div class="dynamicContent">
+            <!--content -->
+            <div class="box">
+
+                <h3>@Model.viewInfo["title"].ToString()</h3>
+
+                <strong class="text">
+                    @Model.viewInfo["name"].ToString()
+                </strong>
+
+                @foreach (var item in Model.viewInfo)
+                {
+                    if (((KeyValuePair<string, string>)item).Key != "name" && ((KeyValuePair<string, string>)item).Key != "title")
+                    { 
+                        <strong class="text">
+                        
+                            @item.Value
+
+                        </strong>
+                    }
+                }
+
+                
+
+                
+
+                @*<p class="text">
+                    @Model.viewInfo["address"].ToString()
+                </p>
+
+                <p class="text">
+                    @Model.viewInfo["country"].ToString()
+                </p>
+
+                <p class="text">
+                    @Model.viewInfo["telefon"].ToString()
+                </p>
+
+                <p class="text">
+                    @Model.viewInfo["fax"].ToString()
+                </p>
+
+                <p class="text">
+                    @Model.viewInfo["email"].ToString()
+                </p>
+
+                <p class="text">
+                    @Model.viewInfo["www"].ToString()
+                </p>
+
+                <p class="text">
+                    @Model.viewInfo["first"].ToString()
+                </p>
+
+                <p class="text">
+                    @Model.viewInfo["second"].ToString()
+                </p>
+
+                <p class="text">
+                    @Model.viewInfo["third"].ToString()
+                </p>
+
+                <p class="text">
+                    @Model.viewInfo["third"].ToString()
+                </p>
+
+                <p class="text">
+                    @Model.viewInfo["third"].ToString()
+                </p>
+
+                <p class="text">
+                    @Model.viewInfo["third"].ToString()
+                </p>*@
+            </div>
+            <!--content end -->
+        </div>
+    </section>
+</div>
+
+<script>
+    $("a[rel^='prettyPhoto']").prettyPhoto({ animation_speed: 'normal', theme: 'dark', social_tools: false, allow_resize: true, default_width: 500, default_height: 344 });
+</script>
+
+

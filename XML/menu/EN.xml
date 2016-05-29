@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <menu>
+    <subtitle>Since 1993</subtitle>
+    <begin>Home</begin>
+    <forus>About</forus>
+    <materials>Services</materials>
+    <textmodels>Portfolio</textmodels>
+    <armchairs>Armchairs</armchairs>
+    <sofas>Sofas </sofas>
+    <cornersofas>Corner sofas</cornersofas>
+    <references>References</references>
+    <contacts>Contact us</contacts>
+  </menu>
+</root>
